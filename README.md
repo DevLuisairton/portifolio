@@ -39,7 +39,7 @@ Meu nome é **Luis Airton**, e sou apaixonado por tecnologia, desenvolvimento we
 
 - **LinkedIn**: [linkedin.com/in/luisairton](https://www.linkedin.com/in/luisairton/)
 - **GitHub**: [github.com/DevLuisairton](https://github.com/DevLuisairton)
-- **E-mail**: [seuemail@gmail.com](mailto:luisairtonsilva@gmail.com)
+- **E-mail**: [luisairtonsilva@gmail.com](mailto:luisairtonsilva@gmail.com)
 
 Sinta-se à vontade para entrar em contato comigo!
 
