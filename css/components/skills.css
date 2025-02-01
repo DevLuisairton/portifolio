@@ -30,6 +30,30 @@
   align-items: center;
   box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.1);
   margin: 0 auto;
+  overflow: hidden; /* Garante que a imagem não ultrapasse os limites do container */
+}
+
+.skills .skills__content ul li .image-container img {
+  width: 100%; /* Faz a imagem ocupar todo o espaço do container */
+  height: 100%; /* Faz a imagem ocupar todo o espaço do container */
+  object-fit: cover; /* Garante que a imagem cubra o espaço sem distorção */
+  border-radius: 50%; /* Mantém a imagem redonda */
+  transition: transform 0.1s ease-in-out; /* Adiciona uma transição suave */
+}
+
+/* Animação de flutuação */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Aplica a animação ao container da imagem */
+.skills .skills__content ul li .image-container:hover img {
+  animation: float 1.5s ease-in-out infinite; /* Aplica a animação ao passar o mouse */
 }
 
 .skills .skills__content ul li h3 {
@@ -37,3 +61,5 @@
   font-weight: 500;
   margin: 2rem 0 1rem;
 }
+
+
