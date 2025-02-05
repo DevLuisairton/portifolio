@@ -32,6 +32,10 @@
   max-width: 66rem;
 }
 
+.about__right {
+  text-align: justify;
+}
+
 
 @media only screen and (max-width: 768px) {
   .about {

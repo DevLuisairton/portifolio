@@ -26,6 +26,10 @@ header img{
   height: 10;
 }
 
+header p {
+  text-align: justify;
+}
+
 header .header__right .header__image {
   position: relative;
   line-height: 0;
