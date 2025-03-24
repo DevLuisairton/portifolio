@@ -1,72 +1,92 @@
 .projects {
   margin-bottom: 16rem;
   scroll-margin-top: 15rem;
-  text-align: justify;
 }
 
-.projects .projects__content {
+.projects__content {
   max-width: 56rem;
   text-align: center;
   margin: 0 auto 6rem;
 }
 
-.projects ul li {
+.projects__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.projects__item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 4rem;
-}
-
-.projects ul li.projects__reversed-list {
-  flex-direction: row-reverse;
-}
-
-.projects ul li:not(:last-of-type) {
   margin-bottom: 12rem;
 }
 
-.projects ul li .image img {
+.projects__item:last-child {
+  margin-bottom: 0;
+}
+
+.projects__reversed-list {
+  flex-direction: row-reverse;
+}
+
+.projects__image {
+  flex: 1;
   width: 100%;
-  min-width: 40rem;
   max-width: 47rem;
-  height: auto;
+  aspect-ratio: 16/9; /* Proporção fixa para todas as imagens */
+  overflow: hidden;
   border-radius: 1rem;
-  transition: transform 0.5s ease, box-shadow 1s ease; 
-  border-radius: 10px; /* Opcional: deixa as bordas arredondadas */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
-.projects img:hover {
-  transform: scale(1.01); /* Aumenta a imagem em 2% */
-  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5); /* Sombra mais destacada */
-  transition: transform 0.8s ease, box-shadow 0.8s ease; 
-  cursor: pointer
+.projects__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
 }
 
+.projects__image:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
 
-.projects ul li .projects__info {
+.projects__image:hover img {
+  transform: scale(1.05);
+}
+
+.projects__info {
+  flex: 1;
   max-width: 47rem;
 }
 
-.projects ul li .projects__info p {
-  margin: 1rem 0 4rem;
+.projects__info p {
+  margin: 1rem 0 2rem;
+  line-height: 1.6;
+  text-align: justify;
 }
 
-.projects ul li .projects__info a {
+.projects__link {
   font-weight: 500;
   text-decoration: underline;
+  color: inherit;
+  transition: color 0.3s ease;
 }
 
-@media only screen and (max-width: 768px) {
-  .projects ul li,
-  .projects ul li.projects__reversed-list {
+.projects__link:hover {
+  color: var(--tertiary-color);
+}
+
+@media (max-width: 768px) {
+  .projects__item,
+  .projects__reversed-list {
     flex-direction: column;
+    gap: 2rem;
   }
-
-  .projects ul li .projects__info {
-    max-width: 66rem;
-  }
-
-  .projects ul li .image img {
-    min-width: auto;
+  
+  .projects__image {
+    max-width: 100%;
   }
 }
